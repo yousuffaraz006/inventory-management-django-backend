@@ -5,7 +5,7 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('user/register/', CreateUserView.as_view(), name='register'),
+    path('user/register/', Signup, name='register'),
     path('token/', MyTokenObtainPairView.as_view(), name='get_token'),
     path('token/refresh/', TokenRefreshView.as_view(), name='refresh_token'),
     path('', include('project_app.urls')),
